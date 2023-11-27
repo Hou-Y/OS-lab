@@ -87,6 +87,10 @@ void sender (pid_t receiverPid, int *p, int *p1) {
     fflush (stdout);
     scanf ("%s", line);
     len=strlen(line);
+    // invece di mandare il numero di caratteri prima e poi mandare il mex
+    // posso:  char c;
+    //write(p[1], &c, sizeof(char) ); ->leggo un singolo carattere volta per volta fino al terminatore di stringa
+    //altrimenti uso 
     write(p[1], &len, 1);
     write(p[1], line, len);
     read(p1[0], &check, 1 ); //come ACK
