@@ -1,3 +1,12 @@
+/*Implement a C program that generates two children, a producer and a consumer. The producer child reads from the keyboard some strings, and it transfers them to the consumer. The consumer child converts the strings into uppercase characters, and it visualizes the strings in standard output.
+
+The introduction of the string “end” terminates both children's processes and then, in sequence, it terminates the parent process. The transfer of the strings has to take place through a file.
+
+Suggestions:
+
+Derive the solution from that of the previous exercise
+Communicating processes are not a parent and a child, but two “siblings”; as a consequence, you have to make sure that each child knows the PID of the “brother”*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
