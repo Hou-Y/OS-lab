@@ -18,6 +18,8 @@ Communicating processes are not a parent and a child, but two “siblings”; as
 #include <sys/wait.h>
 #include <signal.h>
 
+//DOMANDA= il sender (figlio 2) manda il signal al padre OG però! la parte dove sta il pause che aspetta il segnale è il figlio 1, com'è che lo riceve????
+
 #define N 132
 #define NAME "tmp.txt"
 //sender = producer
@@ -47,7 +49,8 @@ main (int argc, char **argv) {
   il PADRE OG es: PID=1
   fa un figlio e riceve PID=0
   e poi il PADRE forka di nuovo, ora, ci sta un padre con PID=1 e due "figli"
-  anche se i figli tornano PID=0 al  PADRE hanno ognuno il SUO PID che posso ottenere usando getpid() dentro al loro processo
+  anche se i figli tornano PID=0 al  PADRE hanno ognuno il SUO PID che posso ottenere usando getpid() dentro al loro processo (es F1=11 e F2=21)
+  ma IO decido che il PADRE farà il figlio (1)  e uno dei due figli sarà nominato PADRE 
   */
 
   fprintf (stdout, "Sender   PID %d\n", senderPid);
