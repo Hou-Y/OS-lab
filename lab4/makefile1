@@ -1,0 +1,5 @@
+target: 
+	gcc -Wall -o ex44 lab4es1.c
+
+
+
