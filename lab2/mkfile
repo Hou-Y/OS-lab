@@ -1,0 +1,13 @@
+GW = gcc -Wall
+
+target: lab2e02.o
+	$(GW) -o  lab2e02 lab2e02.o
+	
+lab2e02.o: 
+	$(GW) -c lab2e02.c
+
+	
+clean:
+	rm -rf *~
+	rm -rf *bak*
+	rm -rf core
