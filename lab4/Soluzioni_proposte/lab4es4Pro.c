@@ -35,14 +35,14 @@ main (int argc, char **argv) {
 
   signal(SIGUSR1,catcher); //debugger
 
-  receiverPid = fork(); //ottengo il PID del "padre" e solo quando solo sul padre della prima fork (e sul figlio della seconda) attivo sender
+  receiverPid = fork(); //il pdare ottiene il PID del figlio 
   if (receiverPid == 0) {
-    receiver (); //se sono sul figlio della prima fork F1
+    receiver (); //se sono sul figlio della prima fork F1, dà al figlio 0
   } 
   else {
     senderPid = fork();
       if (senderPid == 0) {
-        sender (receiverPid); //uso il PID del padre OG
+        sender (receiverPid); //uso il PID del primo figlio
       }
   }
   /*CI SONOOOOOO:
