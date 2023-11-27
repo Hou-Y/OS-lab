@@ -20,7 +20,8 @@ Communicating processes are not a parent and a child, but two “siblings”; as
 
 #define N 132
 #define NAME "tmp.txt"
-//sender = consumer
+//sender = producer
+// receiver = consumer
 void sender (pid_t);
 void receiver ();
 void catcher ();
