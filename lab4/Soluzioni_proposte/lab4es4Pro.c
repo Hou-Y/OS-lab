@@ -91,7 +91,8 @@ void sender (pid_t receiverPid) {
 
     sentMsg++; 	
     kill (receiverPid, SIGUSR1); //però questo manda il segnale alla branca dove lavora SOLO il sender (if/else) con receiverPID!=0
-    //altrimenti lavora SOLO il receiver (se receiverPID==0) - 
+    //altrimenti lavora SOLO il receiver (se receiverPID==0) 
+    //però questo lo manda al padre OG - in altre parole non al processo con il wait che ha il pause visto che quello si triggera solo se receiverPID=0 
     if (strcmp(line, "end") == 0)
       break;
 
