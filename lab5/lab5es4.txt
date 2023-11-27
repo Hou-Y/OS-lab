@@ -3,7 +3,7 @@ Giving a file of name lab05e04in.txt containing the list of the students enrolle
 Using the known filters (commands sort, grep, etc.) and pipes print in the screen:
 
 Supponendo i dati siano nel formato:
-ID STUDENTE | COGNOME | NOME | ID CORSO | ???? | SEMESTRE | GIÀ FREQUENTATO/DA FREQUENTARE
+ID STUDENTE | COGNOME | NOME | ID CORSO | MAJOR | SEMESTRE | GIÀ FREQUENTATO/DA FREQUENTARE
 
 1)The list of the same data ordered by reverse id number (attention to the position of the ids 89499 and 94799)
 sort -rn lab5es4in.txt
@@ -25,8 +25,12 @@ grep 2011/2012 lab5es4in.txt         == trova tutte le entry che hanno al loro i
 grep -options regexp FileName 
 grep serve per filtrare dati in base al loro contenuto (come trovare regexp)
 
+COME MAI :   grep *2011/2012 lab5es4in.txt     non mi trova niente?
 
-The list of students in computer science (INF1T3) ordered by id number.
+
+4)The list of students in computer science (INF1T3) ordered by id number.
+
+
 The list of students with an id that terminates with 2 or with 4, and ordered by surname.
 The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number.
 The list of students which name contains two A letters separated by any two characters.
