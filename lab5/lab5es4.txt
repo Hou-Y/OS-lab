@@ -20,7 +20,7 @@ sort -rk2  lab5es4in.txt
 
 
 3)The list of students who attended in 2011-2012.
-grep 2011/2012 lab5es4in.txt
+grep 2011/2012 lab5es4in.txt         == trova tutte le entry che hanno al loro interno 2011/2012
 
 grep -options regexp FileName 
 grep serve per filtrare dati in base al loro contenuto (come trovare regexp)
