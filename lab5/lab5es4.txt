@@ -1,0 +1,17 @@
+Giving a file of name lab05e04in.txt containing the list of the students enrolled in the course “Algorithms and programming” of the academic year 2012-2013 (source: website of Politecnico di Torino, servizi per gli studenti, iscritti ai corsi, with some small modifications).
+
+Using the known filters (commands sort, grep, etc.) and pipes print in the screen:
+
+1)The list of the same data ordered by reverse id number (attention to the position of the ids 89499 and 94799)
+
+
+
+The list of the same data ordered by surname
+The list of students who attended in 2011-2012.
+The list of students in computer science (INF1T3) ordered by id number.
+The list of students with an id that terminates with 2 or with 4, and ordered by surname.
+The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number.
+The list of students which name contains two A letters separated by any two characters.
+The list of students which name contains two A letters separated by any two characters, but with the “A” characters that do not start or end the name itself.
+Take only the id numbers from the file, eliminate all the digit equal to 0, substitute all the digit equal to 8 with 1, sort the resulting list and eliminate all the duplicates.
+Perform all the operation of the previous point (point 9), but print only duplicate lines, counting them.
