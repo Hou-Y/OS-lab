@@ -19,6 +19,7 @@ Communicating processes are not a parent and a child, but two “siblings”; as
 #include <signal.h>
 
 //fork() restituisce al padre il pid del figlio e ai fligli 0
+//gcc -g per tenere debug (rived gdb)
 #define N 132
 #define NAME "tmp.txt"
 //sender = producer
