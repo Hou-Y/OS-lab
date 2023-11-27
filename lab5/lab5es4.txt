@@ -2,13 +2,22 @@ Giving a file of name lab05e04in.txt containing the list of the students enrolle
 
 Using the known filters (commands sort, grep, etc.) and pipes print in the screen:
 
+Supponendo i dati siano nel formato:
+ID STUDENTE | COGNOME | NOME | ID CORSO | ???? | ???? | GIÀ FREQUENTATO/DA FREQUENTARE
+
 1)The list of the same data ordered by reverse id number (attention to the position of the ids 89499 and 94799)
--r = reverse sort
--n = basato sul valore NUMERICO
 sort -rn lab5es4in.txt
 
+-r = reverse sort
+-n = basato sul valore NUMERICO
+
+
 2)The list of the same data ordered by surname
--k n = ordina in base alla n-esima colonna
+sort -rk2  lab5es4in.txt
+
+-k n = ordina in base alla n-esima colonna (partendo da 1 a sx)
+
+
 
 The list of students who attended in 2011-2012.
 The list of students in computer science (INF1T3) ordered by id number.
