@@ -30,6 +30,8 @@ COME MAI :   grep *2011/2012 lab5es4in.txt     non mi trova niente?
 
 4)The list of students in computer science (INF1T3) ordered by id number.
 
+RIVEDI Parte B della lezione del 9/11
+
 
 The list of students with an id that terminates with 2 or with 4, and ordered by surname.
 The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number.
