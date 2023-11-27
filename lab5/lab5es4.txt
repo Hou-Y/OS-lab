@@ -3,7 +3,7 @@ Giving a file of name lab05e04in.txt containing the list of the students enrolle
 Using the known filters (commands sort, grep, etc.) and pipes print in the screen:
 
 Supponendo i dati siano nel formato:
-ID STUDENTE | COGNOME | NOME | ID CORSO | ???? | ???? | GIÀ FREQUENTATO/DA FREQUENTARE
+ID STUDENTE | COGNOME | NOME | ID CORSO | ???? | SEMESTRE | GIÀ FREQUENTATO/DA FREQUENTARE
 
 1)The list of the same data ordered by reverse id number (attention to the position of the ids 89499 and 94799)
 sort -rn lab5es4in.txt
