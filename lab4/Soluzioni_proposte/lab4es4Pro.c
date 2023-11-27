@@ -1,6 +1,9 @@
-/*Implement a C program that generates two children, a producer and a consumer. The producer child reads from the keyboard some strings, and it transfers them to the consumer. The consumer child converts the strings into uppercase characters, and it visualizes the strings in standard output.
+/*Implement a C program that generates two children, a producer and a consumer. 
+  The producer child reads from the keyboard some strings, and it transfers them to the consumer. 
+  The consumer child converts the strings into uppercase characters, and it visualizes the strings in standard output.
 
-The introduction of the string “end” terminates both children's processes and then, in sequence, it terminates the parent process. The transfer of the strings has to take place through a file.
+The introduction of the string “end” terminates both children's processes and then, in sequence, it terminates the parent process. 
+The transfer of the strings has to take place through a file.
 
 Suggestions:
 
