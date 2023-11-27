@@ -43,6 +43,12 @@ main (int argc, char **argv) {
         sender (receiverPid); //uso il PID del padre OG
       }
   }
+  /*CI SONOOOOOO:
+  il PADRE OG es: PID=1
+  fa un figlio e riceve PID=0
+  e poi il PADRE forka di nuovo, ora, ci sta un padre con PID=1 e due "figli"
+  anche se i figli tornano PID=0 al  PADRE hanno ognuno il SUO PID che posso ottenere usando getpid() dentro al loro processo
+  */
 
   fprintf (stdout, "Sender   PID %d\n", senderPid);
   fprintf (stdout, "Receiver PID %d\n", receiverPid);
