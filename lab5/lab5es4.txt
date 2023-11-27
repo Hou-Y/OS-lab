@@ -8,6 +8,7 @@ ID STUDENTE | COGNOME | NOME | ID CORSO | ???? | SEMESTRE | GIÀ FREQUENTATO/DA 
 1)The list of the same data ordered by reverse id number (attention to the position of the ids 89499 and 94799)
 sort -rn lab5es4in.txt
 
+sort -option FileName
 -r = reverse sort
 -n = basato sul valore NUMERICO
 
@@ -15,11 +16,16 @@ sort -rn lab5es4in.txt
 2)The list of the same data ordered by surname
 sort -rk2  lab5es4in.txt
 
--k n = ordina in base alla n-esima colonna (partendo da 1 a sx)
+-kn = ordina in base alla n-esima colonna (partendo da 1 a sx)
 
 
+3)The list of students who attended in 2011-2012.
+grep 2011/2012 lab5es4in.txt
 
-The list of students who attended in 2011-2012.
+grep -options regexp FileName 
+grep serve per filtrare dati in base al loro contenuto (come trovare regexp)
+
+
 The list of students in computer science (INF1T3) ordered by id number.
 The list of students with an id that terminates with 2 or with 4, and ordered by surname.
 The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number.
