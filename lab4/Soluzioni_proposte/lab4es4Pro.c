@@ -33,7 +33,7 @@ main (int argc, char **argv) {
 
   signal(SIGUSR1,catcher); //debugger
 
-  receiverPid = fork(); //ottendo il PID del "padre"
+  receiverPid = fork(); //ottengo il PID del "padre"
   if (receiverPid == 0) {
     receiver (); //se sono sul figlio della prima fork F1
   } else {
@@ -73,7 +73,7 @@ void sender (pid_t receiverPid) {
   char line[N];
   int sentMsg=0, senderPid;
 
-  senderPid = getpid();
+  senderPid = getpid(); //ottengo il pid SUO
 
   while (1) {
     fprintf (stdout, "SENDER (receiverPid=%d): ", receiverPid);
@@ -89,7 +89,8 @@ void sender (pid_t receiverPid) {
     fclose(fp);
 
     sentMsg++; 	
-    kill (receiverPid, SIGUSR1);
+    kill (receiverPid, SIGUSR1); //però questo manda il segnale alla branca dove lavora SOLO il sender (if/else), quando senderPID!=0
+    //entra nell'IF se invece vale zero
     if (strcmp(line, "end") == 0)
       break;
 
