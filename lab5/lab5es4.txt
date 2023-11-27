@@ -16,7 +16,7 @@ sort -option FileName
 2)The list of the same data ordered by surname
 sort -rk2  lab5es4in.txt
 
--kn = ordina in base alla n-esima colonna (partendo da 1 a sx)
+-kn = ordina in base alla n-esima colonna partendo da 1 a sx (NON da zero come il classico nell'informatica!!!!!)
 
 
 3)The list of students who attended in 2011-2012.
