@@ -8,7 +8,7 @@
 
 #define N 132
 #define NAME "tmp.txt"
-
+//sender = consumer
 void sender (pid_t);
 void receiver ();
 void catcher ();
@@ -18,15 +18,15 @@ main (int argc, char **argv) {
   int cpid, status;
   int receiverPid, senderPid;
 
-  signal(SIGUSR1,catcher);
+  signal(SIGUSR1,catcher); //debugger
 
-  receiverPid = fork();
+  receiverPid = fork(); //ottendo il PID del "padre"
   if (receiverPid == 0) {
-    receiver ();
+    receiver (); //se sono sul figlio della prima fork F1
   } else {
     senderPid = fork();
     if (senderPid == 0) {
-      sender (receiverPid);
+      sender (receiverPid); //uso il PID del padre OG
     }
   }
 
@@ -92,7 +92,7 @@ void receiver () {
   int receivedMsg=0, senderPid, i;
   
   while (1) {
-    pause();
+    pause(); //aspetta il signal dal sender 
 
     fp = fopen (NAME, "r");
     if (fp == NULL) {
