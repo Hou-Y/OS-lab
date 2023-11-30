@@ -39,6 +39,16 @@ grep INF1T3 nomefile.txt -> trovo solo le entry che contengono INF1T3
 5)The list of students with an id that terminates with 2 or with 4, and ordered by surname.
 
 
+Devi usare un Regexp (regular expression)
+opzione -E per usare grep per trovare Regexp
+REGULAR EXPRESSIONS:
+      ^ inizio riga
+      [ abc ] = se il valore è 'a' OPPURE 'b' OPPURE 'c' è accettato
+      [^abc ] = 'a' 'b' e 'c' NON vanno bene
+      * = ripetuto da 0 a infinite volte (dietro a una richiesta
+      [ abc ]* = qualsiasi sequenza contentente solo le lettere abc sono accettate in qualsiasi ordine
+
+
 6)The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number.
 
 
