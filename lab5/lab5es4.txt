@@ -49,10 +49,18 @@ REGULAR EXPRESSIONS:
       [ abc ]* = qualsiasi sequenza contentente solo le lettere abc sono accettate in qualsiasi ordine
 
 
-6)The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number.
+6)The list of TCL students (TLC1T3), that they still have to attend (i.e., row with string “Da frequentare”), sorted in descending order by id number. (ordine decrescente, dal più grande al più piccolo)
+grep -E "frequentare\>"  lab5es4in.txt | grep TLC1T3 |  sort -nr
 
 
-The list of students which name contains two A letters separated by any two characters.
-The list of students which name contains two A letters separated by any two characters, but with the “A” characters that do not start or end the name itself.
-Take only the id numbers from the file, eliminate all the digit equal to 0, substitute all the digit equal to 8 with 1, sort the resulting list and eliminate all the duplicates.
+7)The list of students which name contains two A letters separated by any two characters.
+
+
+
+8)The list of students which name contains two A letters separated by any two characters, but with the “A” characters that do not start or end the name itself.
+
+
+9)Take only the id numbers from the file, eliminate all the digit equal to 0, substitute all the digit equal to 8 with 1, sort the resulting list and eliminate all the duplicates.
+
+
 Perform all the operation of the previous point (point 9), but print only duplicate lines, counting them.
