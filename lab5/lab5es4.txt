@@ -37,7 +37,7 @@ grep INF1T3 nomefile.txt -> trovo solo le entry che contengono INF1T3
 
 
 5)The list of students with an id that terminates with 2 or with 4, and ordered by surname.
-grep -E "^[^\n ]*[24]\>" lab5es4in.txt
+grep -E "^[^\n ]*[24]\>" lab5es4in.txt | sort -k2
 
 Devi usare un Regexp (regular expression)
 opzione -E per usare grep per trovare Regexp
