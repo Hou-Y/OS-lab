@@ -60,7 +60,7 @@ grep -E "frequentare\>"  lab5es4in.txt | grep TLC1T3 |  sort -nr
 7)The list of students which name contains two A letters separated by any two characters.
 grep "A..A" lab5es4in.txt 
 
-come mai grep -E "*A[\D]{2}A"  lab5es4in.txt  non funziona?
+come mai grep -E "*A[\SIMBOLO PER CARATTERI!!]{2}A"  lab5es4in.txt  non funziona?
 
 8)The list of students which name contains two A letters separated by any two characters, but with the “A” characters that do not start or end the name itself.
 DA FARE
