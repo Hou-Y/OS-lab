@@ -72,10 +72,14 @@ ricordando che:
       \D == NOT a digit
 
 8)The list of students which name contains two A letters separated by any two characters, but with the “A” characters that do not start or end the name itself.
-
-
+egrep "[B-Z]A[A-Z]{2}A[B-Z]" lab5es4in.txt
+ controlla che dopo A..A ci sia almeno un singolo carattere che sia un carattere (non A)
 
 9)Take only the id numbers from the file, eliminate all the digit equal to 0, substitute all the digit equal to 8 with 1, sort the resulting list and eliminate all the duplicates.
+cut -d " " -f 1 lab5es4in.txt -> selezione la colonna che NON VIENE TAGLIATA VIA (rimane)
 
+come fare se voglio tenere tutte le righe tranne tre o quattro sparse per il file?
+ cut -d " " -f 1 lab5es4in.txt | tr -d "0" | tr "8" "1" | sort -n | uniq
 
 Perform all the operation of the previous point (point 9), but print only duplicate lines, counting them.
+cut -d ' ' -f 1 lab06e04in.txt | tr -d 0 | tr 8 1 | sort -n | uniq -d
