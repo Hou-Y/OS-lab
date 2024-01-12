@@ -1,0 +1,9 @@
+Illustrate the characteristics, differences and typical use of the system calls fork, execve, and system. 
+
+System call fork creates a new process called child keeping the former (now called father) which starts from the next operation that generates the process
+Every child inherits the father's characteristics and has its own stack of memory for variables unlike threads that has shared pointers
+
+execve jumps to the command specified 
+???
+
+system is like a fork with the child executing execve and the parent continuing with his process
