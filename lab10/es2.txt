@@ -1,9 +1,41 @@
 Illustrate the characteristics, differences and typical use of the system calls fork, execve, and system. 
 
-System call fork creates a new process called child keeping the former (now called father) which starts from the next operation that generates the process
+System call fork clones a process, the clone is called child and the original is now called father. They both start from the next command in their code after the fork 
 Every child inherits the father's characteristics and has its own stack of memory for variables unlike threads that has shared pointers
 
-execve jumps to the command specified 
-???
+execve jumps to the command specified which is started from its main, substituiting the former process
 
 system is like a fork with the child executing execve and the parent continuing with his process
+
+SOL:
+Summarizing:
+
+fork
+Called one time, it returns two times. It clones the calling process.
+Parent and child continue their execution from the next line.
+The child process receives a copy of the stack and of the heap.
+Instead, the code is shared.
+
+Prototype: pid_t fork (void)
+Return values
+* 0 in the child
+* the pid of the child in the parent
+* -1 on error
+
+execve
+The process that calls the exec is completely substituted by the new process. The new process is executed starting from the main.
+
+v = array of pointers
+e = receives the "environment variables" as parameter, instead of using the current one
+
+Prototype: int execve (char *path, char *argv[], char *env[]);
+On success the function does not return; on error it returns -1.
+
+system
+Executes a command (specified as a string) within a program.
+
+Example 1: system ("ls -laR");
+Example 2: char s[100];
+           strcpy (s, "ls -laR");
+           system (s);
+It is implemented using fork, exec and waitpid.
