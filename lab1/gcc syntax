@@ -1,1 +1,1 @@
-gcc -Wall -o Executable -code.c
+gcc -Wall a.c -o Executable 
